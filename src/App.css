@@ -1,0 +1,181 @@
+:root{
+  --vary-Grayish-color: hsl(240, 78%, 98%);
+  --l-Grayish-color:hsl(234, 14%, 74%);
+  --Grayish-color:hsl(233, 13%, 49%);
+  --Dark-color:hsl(232, 13%, 33%);
+  
+}
+*{
+  list-style: none;
+
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-size:  15px;
+  background-color: var( --vary-Grayish-color);
+  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+.container{
+  position: relative;
+  top: 50%;
+  left: 18%;
+  margin-top: 5rem;
+
+}
+.header{
+  transform: translateX(28%);
+  margin-bottom: 3rem;
+}
+.header h3{
+color: var(--Grayish-color);
+position: relative;
+  left: -2%;
+  font-size: 20px;
+}
+.header .button{
+  position: relative;
+  cursor: pointer;
+  width: 3.5rem;
+  height: 1.8rem;
+  border-radius: 15px;
+  background: linear-gradient(to right , hsl(236, 72%, 79%) , hsl(237, 63%, 64%) );
+  transition: all 0.5s ease-in-out;
+}
+.header .button:hover .cer {
+  left: 26px !important;
+}
+.header .button:hover  {
+  opacity: 0.5;
+}
+.header .button::after{
+  position: absolute;
+  content: "Annually";
+  color: var(--l-Grayish-color);
+  left: -150%;
+  top: 15%;
+}
+.header .button::before{
+
+  position: absolute;
+  content: "Monthly";
+  color: var(--l-Grayish-color);
+  right: -150%;
+  top: 15%;
+}
+.header .cer{
+  transition: all 0.3s ease-in-out;
+
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 4px;
+}
+.header .button:hover .header .cer{
+right: 4px !important;
+}
+.cards{
+  display: flex;
+}
+.card{
+  background-color: #fff;
+padding: 1.5rem;
+  width: 250px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  cursor: pointer;
+
+
+}
+
+.card:nth-child(2){
+  background: linear-gradient(to right , hsl(236, 72%, 79%) , hsl(237, 63%, 64%) );
+  transform:scale(1.1);
+}
+
+.card:nth-child(2) h2,.card:nth-child(2) li ,.card:nth-child(2) span{
+  
+  color: #fff;
+}
+.card:nth-child(2)  .buton {
+background: linear-gradient(45deg, #fff, #fff);
+color: hsl(237, 63%, 64%);
+
+}
+
+.card span{
+  color: var(--l-Grayish-color);
+  font-size: 15px;
+}
+.card h2{
+  color:var(--Grayish-color);
+  font-size: 3rem;
+}
+.card li{
+  padding: 1rem 0;
+  border-top: 0.5px solid var(--Grayish-color);
+  color:var(--Grayish-color);
+  font-size: 12px;
+
+}
+.card .buton{
+  padding: 0.8rem 3rem;
+  background: linear-gradient(to right , hsl(236, 72%, 79%) , hsl(237, 63%, 64%) );
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+.card .buton:hover{
+  background: linear-gradient(45deg, #fff, #fff);
+  color: hsl(237, 63%, 64%);
+  border: 1px solid hsl(237, 63%, 64%);
+  outline:none;
+
+}
+.card:nth-child(2)  .buton:hover {  
+  background: linear-gradient(to right , hsl(236, 72%, 79%) , hsl(237, 63%, 64%) );
+color: #fff;
+    border: 1px solid #fff};
+
+
+@media (max-width:767px) {
+  .container{
+      display: flex;
+      flex-direction: column;
+      position:unset;
+      transform: translateX(0);
+      left: 0;
+  }
+.header{
+  transform:none
+  ;
+  margin: 0 auto;
+}
+.header h3{
+  left: 0;
+}
+.header .button{
+  margin: 0 auto;
+}
+  .cards{
+      flex-direction: column;
+      margin: 3rem auto;
+  }
+  .card{
+      margin-bottom: 1.5rem;
+  }
+  .card:nth-child(2){
+      transform: scale(1);
+  }
+}
